@@ -1,0 +1,2 @@
+class Banheiro < ApplicationRecord
+end

@@ -1,0 +1,2 @@
+class Lavanderium < ApplicationRecord
+end

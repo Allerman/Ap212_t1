@@ -1,0 +1,29 @@
+<h1>Lista de Compras para o Enxoval</h1>
+
+<h2>Cozinha</h2>
+<ul>
+  <% @cozinhas.each do |cozinha| %>
+    <li><%= cozinha.item %></li>
+  <% end %>
+</ul>
+
+<h2>Banheiro</h2>
+<ul>
+  <% @banheiros.each do |banheiro| %>
+    <li><%= banheiro.item %></li>
+  <% end %>
+</ul>
+
+<h2>Lavanderia</h2>
+<ul>
+  <% @lavanderias.each do |lavanderia| %>
+    <li><%= lavanderia.item %></li>
+  <% end %>
+</ul>
+
+<h2>Quarto</h2>
+<ul>
+  <% @quartos.each do |quarto| %>
+    <li><%= quarto.item %></li>
+  <% end %>
+</ul>

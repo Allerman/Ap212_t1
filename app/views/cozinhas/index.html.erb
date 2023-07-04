@@ -1,0 +1,12 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>Cozinha</h1>
+
+<div id="cozinhas">
+  <% @cozinhas.each do |cozinha| %>
+    <%= render cozinha %>
+
+  <% end %>
+</div>
+
+<%= link_to "Novo item", new_cozinha_path %>

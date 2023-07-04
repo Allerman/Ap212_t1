@@ -1,0 +1,27 @@
+<%= form_with(model: cozinha) do |form| %>
+  <% if cozinha.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(cozinha.errors.count, "error") %> prohibited this cozinha from being saved:</h2>
+
+      <ul>
+        <% cozinha.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div>
+    <%= form.label :item, style: "display: block" %>
+    <%= form.text_field :item %>
+  </div>
+
+  <div>
+    <%= form.label :comprado, style: "display: block" %>
+    <%= form.check_box :comprado %>
+  </div>
+
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>
