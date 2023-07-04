@@ -1,12 +1,19 @@
 <h1>Compras Ap 212</h1>
 
+<h2>Quarto</h2>
+<ul>
+  <% @quartos.each do |quarto| %>
+    <li><%= quarto.item %></li>
+  <% end %>
+  <%= link_to "Adicionar +", new_quarto_path %>
+</ul>
+
 <h2>Cozinha</h2>
 <ul>
   <% @cozinhas.each do |cozinha| %>
     <li><%= cozinha.item %></li>
   <% end %>
   <%= link_to "Adicionar +", new_cozinha_path %>
-
 </ul>
 
 <h2>Banheiro</h2>
@@ -14,6 +21,7 @@
   <% @banheiros.each do |banheiro| %>
     <li><%= banheiro.item %></li>
   <% end %>
+  <%= link_to "Adicionar +", new_banheiro_path %>
 </ul>
 
 <h2>Lavanderia</h2>
@@ -21,11 +29,6 @@
   <% @lavanderias.each do |lavanderia| %>
     <li><%= lavanderia.item %></li>
   <% end %>
+  <%= link_to "Adicionar +", new_lavanderium_path %>
 </ul>
 
-<h2>Quarto</h2>
-<ul>
-  <% @quartos.each do |quarto| %>
-    <li><%= quarto.item %></li>
-  <% end %>
-</ul>
