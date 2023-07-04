@@ -16,8 +16,8 @@ class CozinhasController < ApplicationController
   end
 
   # GET /cozinhas/1/edit
-  def edit
-  end
+  # def edit
+  # end
 
   # POST /cozinhas or /cozinhas.json
   def create
@@ -25,7 +25,7 @@ class CozinhasController < ApplicationController
 
     respond_to do |format|
       if @cozinha.save
-        format.html { redirect_to cozinha_url(@cozinha), notice: "Cozinha was successfully created." }
+        format.html { render :show, notice: "Cozinha was successfully created." }
         format.json { render :show, status: :created, location: @cozinha }
       else
         format.html { render :new, status: :unprocessable_entity }
@@ -35,17 +35,17 @@ class CozinhasController < ApplicationController
   end
 
   # PATCH/PUT /cozinhas/1 or /cozinhas/1.json
-  def update
-    respond_to do |format|
-      if @cozinha.update(cozinha_params)
-        format.html { redirect_to cozinha_url(@cozinha), notice: "Cozinha was successfully updated." }
-        format.json { render :show, status: :ok, location: @cozinha }
-      else
-        format.html { render :edit, status: :unprocessable_entity }
-        format.json { render json: @cozinha.errors, status: :unprocessable_entity }
-      end
-    end
-  end
+  # def update
+  #   respond_to do |format|
+  #     if @cozinha.update(cozinha_params)
+  #       format.html { redirect_to cozinha_url(@cozinha), notice: "Cozinha was successfully updated." }
+  #       format.json { render :show, status: :ok, location: @cozinha }
+  #     else
+  #       format.html { render :edit, status: :unprocessable_entity }
+  #       format.json { render json: @cozinha.errors, status: :unprocessable_entity }
+  #     end
+  #   end
+  # end
 
   # DELETE /cozinhas/1 or /cozinhas/1.json
   def destroy
