@@ -1,10 +1,12 @@
-<h1>Lista de Compras para o Enxoval</h1>
+<h1>Compras Ap 212</h1>
 
 <h2>Cozinha</h2>
 <ul>
   <% @cozinhas.each do |cozinha| %>
     <li><%= cozinha.item %></li>
   <% end %>
+  <%= link_to "Adicionar +", new_cozinha_path %>
+
 </ul>
 
 <h2>Banheiro</h2>
