@@ -25,7 +25,7 @@ class QuartosController < ApplicationController
 
     respond_to do |format|
       if @quarto.save
-        format.html { redirect_to quarto_url(@quarto), notice: "Quarto was successfully created." }
+        format.html { render :show, notice: "Item was successfully created." }
         format.json { render :show, status: :created, location: @quarto }
       else
         format.html { render :new, status: :unprocessable_entity }
@@ -35,24 +35,24 @@ class QuartosController < ApplicationController
   end
 
   # PATCH/PUT /quartos/1 or /quartos/1.json
-  def update
-    respond_to do |format|
-      if @quarto.update(quarto_params)
-        format.html { redirect_to quarto_url(@quarto), notice: "Quarto was successfully updated." }
-        format.json { render :show, status: :ok, location: @quarto }
-      else
-        format.html { render :edit, status: :unprocessable_entity }
-        format.json { render json: @quarto.errors, status: :unprocessable_entity }
-      end
-    end
-  end
+  # def update
+  #   respond_to do |format|
+  #     if @quarto.update(quarto_params)
+  #       format.html { redirect_to quarto_url(@quarto), notice: "Quarto was successfully updated." }
+  #       format.json { render :show, status: :ok, location: @quarto }
+  #     else
+  #       format.html { render :edit, status: :unprocessable_entity }
+  #       format.json { render json: @quarto.errors, status: :unprocessable_entity }
+  #     end
+  #   end
+  # end
 
   # DELETE /quartos/1 or /quartos/1.json
   def destroy
     @quarto.destroy
 
     respond_to do |format|
-      format.html { redirect_to quartos_url, notice: "Quarto was successfully destroyed." }
+      format.html { redirect_to quartos_url, notice: "Item was successfully destroyed." }
       format.json { head :no_content }
     end
   end

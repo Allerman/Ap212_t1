@@ -25,7 +25,7 @@ class LavanderiaController < ApplicationController
 
     respond_to do |format|
       if @lavanderium.save
-        format.html { redirect_to lavanderium_url(@lavanderium), notice: "Lavanderium was successfully created." }
+        format.html { render :show, notice: "Item was successfully created." }
         format.json { render :show, status: :created, location: @lavanderium }
       else
         format.html { render :new, status: :unprocessable_entity }
@@ -35,24 +35,24 @@ class LavanderiaController < ApplicationController
   end
 
   # PATCH/PUT /lavanderia/1 or /lavanderia/1.json
-  def update
-    respond_to do |format|
-      if @lavanderium.update(lavanderium_params)
-        format.html { redirect_to lavanderium_url(@lavanderium), notice: "Lavanderium was successfully updated." }
-        format.json { render :show, status: :ok, location: @lavanderium }
-      else
-        format.html { render :edit, status: :unprocessable_entity }
-        format.json { render json: @lavanderium.errors, status: :unprocessable_entity }
-      end
-    end
-  end
+  # def update
+  #   respond_to do |format|
+  #     if @lavanderium.update(lavanderium_params)
+  #       format.html { redirect_to lavanderium_url(@lavanderium), notice: "Item was successfully updated." }
+  #       format.json { render :show, status: :ok, location: @lavanderium }
+  #     else
+  #       format.html { render :edit, status: :unprocessable_entity }
+  #       format.json { render json: @lavanderium.errors, status: :unprocessable_entity }
+  #     end
+  #   end
+  # end
 
   # DELETE /lavanderia/1 or /lavanderia/1.json
   def destroy
     @lavanderium.destroy
 
     respond_to do |format|
-      format.html { redirect_to lavanderia_url, notice: "Lavanderium was successfully destroyed." }
+      format.html { redirect_to lavanderia_url, notice: "Item was successfully destroyed." }
       format.json { head :no_content }
     end
   end

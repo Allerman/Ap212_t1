@@ -25,7 +25,7 @@ class CozinhasController < ApplicationController
 
     respond_to do |format|
       if @cozinha.save
-        format.html { render :show, notice: "Cozinha was successfully created." }
+        format.html { render :show, notice: "Item was successfully created." }
         format.json { render :show, status: :created, location: @cozinha }
       else
         format.html { render :new, status: :unprocessable_entity }
@@ -52,7 +52,7 @@ class CozinhasController < ApplicationController
     @cozinha.destroy
 
     respond_to do |format|
-      format.html { redirect_to cozinhas_url, notice: "Cozinha was successfully destroyed." }
+      format.html { redirect_to cozinhas_url, notice: "Item was successfully destroyed." }
       format.json { head :no_content }
     end
   end

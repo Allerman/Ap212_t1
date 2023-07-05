@@ -16,8 +16,8 @@ class BanheirosController < ApplicationController
   end
 
   # GET /banheiros/1/edit
-  def edit
-  end
+  # def edit
+  # end
 
   # POST /banheiros or /banheiros.json
   def create
@@ -25,7 +25,7 @@ class BanheirosController < ApplicationController
 
     respond_to do |format|
       if @banheiro.save
-        format.html { redirect_to banheiro_url(@banheiro), notice: "Banheiro was successfully created." }
+        format.html { render :show, notice: "Item was successfully created." }
         format.json { render :show, status: :created, location: @banheiro }
       else
         format.html { render :new, status: :unprocessable_entity }
@@ -35,24 +35,24 @@ class BanheirosController < ApplicationController
   end
 
   # PATCH/PUT /banheiros/1 or /banheiros/1.json
-  def update
-    respond_to do |format|
-      if @banheiro.update(banheiro_params)
-        format.html { redirect_to banheiro_url(@banheiro), notice: "Banheiro was successfully updated." }
-        format.json { render :show, status: :ok, location: @banheiro }
-      else
-        format.html { render :edit, status: :unprocessable_entity }
-        format.json { render json: @banheiro.errors, status: :unprocessable_entity }
-      end
-    end
-  end
+  # def update
+  #   respond_to do |format|
+  #     if @banheiro.update(banheiro_params)
+  #       format.html { redirect_to banheiro_url(@banheiro), notice: "Item was successfully updated." }
+  #       format.json { render :show, status: :ok, location: @banheiro }
+  #     else
+  #       format.html { render :edit, status: :unprocessable_entity }
+  #       format.json { render json: @banheiro.errors, status: :unprocessable_entity }
+  #     end
+  #   end
+  # end
 
   # DELETE /banheiros/1 or /banheiros/1.json
   def destroy
     @banheiro.destroy
 
     respond_to do |format|
-      format.html { redirect_to banheiros_url, notice: "Banheiro was successfully destroyed." }
+      format.html { redirect_to banheiros_url, notice: "Item was successfully destroyed." }
       format.json { head :no_content }
     end
   end
