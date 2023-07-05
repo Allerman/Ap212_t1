@@ -1,0 +1,25 @@
+body {
+    background: linear-gradient(to top, #FC9E4F86, #F2F3AE);
+    margin: 0;
+    padding: 0;
+  }
+#conteiner {
+    margin: 1%;
+}
+#btnnovo, .delete-button{
+    background-color: #ff501bb0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 30px;
+    height: 30px;
+    border-color: transparent;
+    border-radius: 50%;
+    margin-top: 1%;
+    cursor: pointer;
+}
+
+#item_conteiner{
+    display: flex;
+    align-items: center;
+}
