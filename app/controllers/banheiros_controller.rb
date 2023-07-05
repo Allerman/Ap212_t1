@@ -52,7 +52,7 @@ class BanheirosController < ApplicationController
     @banheiro.destroy
 
     respond_to do |format|
-      format.html { redirect_to banheiros_url, notice: "Item was successfully destroyed." }
+      format.html { render :show, notice: "Item was successfully destroyed." }
       format.json { head :no_content }
     end
   end

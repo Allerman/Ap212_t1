@@ -52,7 +52,7 @@ class CozinhasController < ApplicationController
     @cozinha.destroy
 
     respond_to do |format|
-      format.html { redirect_to cozinhas_url, notice: "Item was successfully destroyed." }
+      format.html { render :show, notice: "Item was successfully destroyed." }
       format.json { head :no_content }
     end
   end
