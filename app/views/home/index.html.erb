@@ -1,17 +1,23 @@
+<div id="conteiner">
 <h1>Compras Ap 212</h1>
 
+<link href="/assets/seu-arquivo.css" rel="stylesheet">
 
 <h2>Quarto</h2>
 
 <ul>
       <% @quartos.each do |quarto| %>
-        <li><%= quarto.item %></li>
-          <%= button_to quarto, method: :delete, class: "delete-button" do %>
+
+      <div id="item_conteiner">  
+      <li><%= quarto.item %></li>  
+      </div>
+        <%= button_to quarto, method: :delete, class: "delete-button" do %>
             <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAqklEQVRIS2NkoDFgpLH5DIQscAA6YD4QK+BwyAOgeCIQH8DlUEIWgAyQJ+BLkBpFci34D9WIyyGE5AkGESEDCMljWADTQGncw32M7nWaWwBzOUGvo3kRp3qyI4/aFqC7kBAfbj+xPiBkIMVBNGoBRr4iNUhG44Bg0URxEBGygWQLPgBN5CdkKpr8Q2w1H66cDKoqFxBRm8HsABmegK3qJFRlkugJTOU0twAAUHk4GewN7TMAAAAASUVORK5CYII="/>
           <% end %>
+         
         <% end %>
 
-    <button type="button" onclick="window.location.href='<%= new_quarto_path %>'">
+    <button id="btnnovo" type="button" onclick="window.location.href='<%= new_quarto_path %>'">
       <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAABX0lEQVRIS72VgVHDMAxF20lIJwAmgBHKBHQDYBJgAtoJgA1gAmCDdhL4j5Nyshvb6dGgO10ujvz/lywr89nENp8YfzaGYCURF/IzczR9mr/o+VoTWSNYauO9vGtkudX3Ozlke1YieFDkjUXv9OT9zVSzTDaX8lv5icURA1FiQwQRnA281wwSMsUejbSPzwkoy7N9PQ+KGxy/GX1Y0JWefblygq2lXFL+bSBDmXsmYCxcUQxcafFJTs27guQaAVtcYJ9FJFgr4Fpeq3uLwLPYCAfByT2gt0/ltdq3CPwswAInIRja7GutQ46VSHCKHwzxqATHLNGXBFKupESTH7JfsqSPs+K3DrnaprGP/3LRknv076OCLOKw4+IwwGp20LBzoEhCXXl/l9NpGB3CTwjwztb2JmneRblKDh1gn/elLKg5RAf9cCIYRDiqGSUYfU42gA4CO8CYf3JJ+aj1yQl+ALXFWBlA8mxnAAAAAElFTkSuQmCC" alt="Adicionar">
     </button>
 </ul>
@@ -22,13 +28,18 @@
 
 <ul>
       <% @cozinhas.each do |cozinha| %>
+        
+
+        <div id="item_conteiner">  
         <li><%= cozinha.item %></li>
+        </div>
           <%= button_to cozinha, method: :delete, class: "delete-button" do %>
             <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAqklEQVRIS2NkoDFgpLH5DIQscAA6YD4QK+BwyAOgeCIQH8DlUEIWgAyQJ+BLkBpFci34D9WIyyGE5AkGESEDCMljWADTQGncw32M7nWaWwBzOUGvo3kRp3qyI4/aFqC7kBAfbj+xPiBkIMVBNGoBRr4iNUhG44Bg0URxEBGygWQLPgBN5CdkKpr8Q2w1H66cDKoqFxBRm8HsABmegK3qJFRlkugJTOU0twAAUHk4GewN7TMAAAAASUVORK5CYII="/>
           <% end %>
+          
         <% end %>
 
-    <button type="button" onclick="window.location.href='<%= new_cozinha_path %>'">
+    <button id="btnnovo" type="button" onclick="window.location.href='<%= new_cozinha_path %>'">
       <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAABX0lEQVRIS72VgVHDMAxF20lIJwAmgBHKBHQDYBJgAtoJgA1gAmCDdhL4j5Nyshvb6dGgO10ujvz/lywr89nENp8YfzaGYCURF/IzczR9mr/o+VoTWSNYauO9vGtkudX3Ozlke1YieFDkjUXv9OT9zVSzTDaX8lv5icURA1FiQwQRnA281wwSMsUejbSPzwkoy7N9PQ+KGxy/GX1Y0JWefblygq2lXFL+bSBDmXsmYCxcUQxcafFJTs27guQaAVtcYJ9FJFgr4Fpeq3uLwLPYCAfByT2gt0/ltdq3CPwswAInIRja7GutQ46VSHCKHwzxqATHLNGXBFKupESTH7JfsqSPs+K3DrnaprGP/3LRknv076OCLOKw4+IwwGp20LBzoEhCXXl/l9NpGB3CTwjwztb2JmneRblKDh1gn/elLKg5RAf9cCIYRDiqGSUYfU42gA4CO8CYf3JJ+aj1yQl+ALXFWBlA8mxnAAAAAElFTkSuQmCC" alt="Adicionar">
     </button>
 </ul>
@@ -38,13 +49,18 @@
 
 <ul>
   <% @banheiros.each do |banheiro| %>
+      
+
+      <div id="item_conteiner">  
       <li><%= banheiro.item %></li>
+      </div>
         <%= button_to banheiro, method: :delete, class: "delete-button" do %>
           <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAqklEQVRIS2NkoDFgpLH5DIQscAA6YD4QK+BwyAOgeCIQH8DlUEIWgAyQJ+BLkBpFci34D9WIyyGE5AkGESEDCMljWADTQGncw32M7nWaWwBzOUGvo3kRp3qyI4/aFqC7kBAfbj+xPiBkIMVBNGoBRr4iNUhG44Bg0URxEBGygWQLPgBN5CdkKpr8Q2w1H66cDKoqFxBRm8HsABmegK3qJFRlkugJTOU0twAAUHk4GewN7TMAAAAASUVORK5CYII="/>
         <% end %>
+        
       <% end %>
 
-    <button type="button" onclick="window.location.href='<%= new_banheiro_path %>'">
+    <button id="btnnovo" type="button" onclick="window.location.href='<%= new_banheiro_path %>'">
       <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAABX0lEQVRIS72VgVHDMAxF20lIJwAmgBHKBHQDYBJgAtoJgA1gAmCDdhL4j5Nyshvb6dGgO10ujvz/lywr89nENp8YfzaGYCURF/IzczR9mr/o+VoTWSNYauO9vGtkudX3Ozlke1YieFDkjUXv9OT9zVSzTDaX8lv5icURA1FiQwQRnA281wwSMsUejbSPzwkoy7N9PQ+KGxy/GX1Y0JWefblygq2lXFL+bSBDmXsmYCxcUQxcafFJTs27guQaAVtcYJ9FJFgr4Fpeq3uLwLPYCAfByT2gt0/ltdq3CPwswAInIRja7GutQ46VSHCKHwzxqATHLNGXBFKupESTH7JfsqSPs+K3DrnaprGP/3LRknv076OCLOKw4+IwwGp20LBzoEhCXXl/l9NpGB3CTwjwztb2JmneRblKDh1gn/elLKg5RAf9cCIYRDiqGSUYfU42gA4CO8CYf3JJ+aj1yQl+ALXFWBlA8mxnAAAAAElFTkSuQmCC" alt="Adicionar">
     </button>
 </ul>
@@ -55,13 +71,21 @@
 
 <ul>
   <% @lavanderias.each do |lavanderia| %>
+
+    <div id="item_conteiner">  
       <li><%= lavanderia.item %></li>
+      </div>
         <%= button_to lavanderia, method: :delete, class: "delete-button" do %>
           <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAqklEQVRIS2NkoDFgpLH5DIQscAA6YD4QK+BwyAOgeCIQH8DlUEIWgAyQJ+BLkBpFci34D9WIyyGE5AkGESEDCMljWADTQGncw32M7nWaWwBzOUGvo3kRp3qyI4/aFqC7kBAfbj+xPiBkIMVBNGoBRr4iNUhG44Bg0URxEBGygWQLPgBN5CdkKpr8Q2w1H66cDKoqFxBRm8HsABmegK3qJFRlkugJTOU0twAAUHk4GewN7TMAAAAASUVORK5CYII="/>
         <% end %>
+        
   <% end %>
-    <button type="button" onclick="window.location.href='<%= new_lavanderium_path %>'">
+
+    <button id="btnnovo" type="button" onclick="window.location.href='<%= new_lavanderium_path %>'">
       <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAABX0lEQVRIS72VgVHDMAxF20lIJwAmgBHKBHQDYBJgAtoJgA1gAmCDdhL4j5Nyshvb6dGgO10ujvz/lywr89nENp8YfzaGYCURF/IzczR9mr/o+VoTWSNYauO9vGtkudX3Ozlke1YieFDkjUXv9OT9zVSzTDaX8lv5icURA1FiQwQRnA281wwSMsUejbSPzwkoy7N9PQ+KGxy/GX1Y0JWefblygq2lXFL+bSBDmXsmYCxcUQxcafFJTs27guQaAVtcYJ9FJFgr4Fpeq3uLwLPYCAfByT2gt0/ltdq3CPwswAInIRja7GutQ46VSHCKHwzxqATHLNGXBFKupESTH7JfsqSPs+K3DrnaprGP/3LRknv076OCLOKw4+IwwGp20LBzoEhCXXl/l9NpGB3CTwjwztb2JmneRblKDh1gn/elLKg5RAf9cCIYRDiqGSUYfU42gA4CO8CYf3JJ+aj1yQl+ALXFWBlA8mxnAAAAAElFTkSuQmCC" alt="Adicionar">
     </button>
 </ul>
 
+
+<link href="/assets/stylesheets/home.css" rel="stylesheet">
+</div>
